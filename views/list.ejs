@@ -1,0 +1,35 @@
+<!-- <html>
+    <head>
+       <meta charset="utf-8">
+       <title>TO-DO-LIST</title> 
+       <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body> -->
+      
+        <%- include("header") -%>
+        <div class="box" id="heading">
+        <h1 style="color: purple;">going on work on <%= listTitle %> !</h1>
+    </div>
+      
+             
+            <div class="box">
+
+           <% for(var i=0;i<newlistitems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+            <p> <%= newlistitems[i] %> </p>
+        </div>
+          <% } %>
+          <form class="item" action="/" method="post">
+            <input type="text" name="newitem" placeholder="NEW ITEM" autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+
+    <%- include("footer") -%>
+
+    <!-- <footer>
+        COPYRIGHT 2023 MADE BY ARYAN
+    </footer>
+    </body>
+</html> -->
